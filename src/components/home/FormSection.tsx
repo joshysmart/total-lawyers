@@ -10,13 +10,13 @@ import Support from "./Supports";
 import StepThree from "../forms/StepThree";
 import StepFour from "../forms/StepFour";
 import StepFive from "../forms/StepFive";
+import { toast } from "react-toastify";
 
 export default function FormSection() {
-  const [step, setStep] = useState(4);
+  const [step, setStep] = useState(1);
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     setValue,
     clearErrors,
@@ -27,7 +27,9 @@ export default function FormSection() {
     console.log(data);
     if (step < LAST_STEP) {
       setStep(step + 1);
+      return;
     }
+    toast.success("Form submitted successfully");
   };
 
   return (
