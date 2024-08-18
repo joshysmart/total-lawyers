@@ -41,7 +41,7 @@ export default function StepFive({ register, errors }: StepFiveProps) {
         {nameError && <ErrorText message={nameError} />}
       </fieldset>
 
-      {otherFields.map(({ name, label, required }) => (
+      {otherFields.map(({ name, label, type, required }) => (
         <fieldset key={name} className="flex flex-col gap-4">
           <label htmlFor={name} className="flex gap-2">
             <span>{label}</span>
@@ -50,7 +50,7 @@ export default function StepFive({ register, errors }: StepFiveProps) {
             name={name}
             placeholder={label}
             register={register}
-            type="text"
+            type={type}
             required={required}
           />
         </fieldset>
@@ -83,15 +83,18 @@ const otherFields: {
   name: keyof StepFiveValues;
   label: string;
   required: string;
+  type: string;
 }[] = [
   {
     name: "telephone",
     label: en.telephoneLabel,
     required: en.telephoneRequired,
+    type: "tel",
   },
   {
     name: "email",
     label: en.emailLabel,
     required: en.emailRequired,
+    type: "email",
   },
 ];
