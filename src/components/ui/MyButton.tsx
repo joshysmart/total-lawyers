@@ -14,7 +14,7 @@ export default function MyButton({
     <Button
       {...props}
       className={cn(
-        "bg-yellow hover:bg-yellow/80 font-bold text-xl",
+        "bg-yellow shadow-lg hover:bg-yellow/80 font-bold text-xl",
         className
       )}
     >

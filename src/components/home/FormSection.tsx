@@ -11,6 +11,8 @@ import StepThree from "../forms/StepThree";
 import StepFour from "../forms/StepFour";
 import StepFive from "../forms/StepFive";
 import { toast } from "react-toastify";
+import en from "@/language/en";
+import PurifiedHtml from "../ui/PurifiedHtml";
 
 export default function FormSection() {
   const [step, setStep] = useState(1);
@@ -57,6 +59,17 @@ export default function FormSection() {
       </form>
       <div className="lg:hidden">
         <Support />
+
+        {step === 4 && (
+          <p className="mt-6 text-xs text-[#8F8F8F]">
+            {en.privacyDisclaimerDescription}
+          </p>
+        )}
+        {step === 5 && (
+          <div className="mt-6">
+            <PurifiedHtml html={en.tosPolicy} />
+          </div>
+        )}
       </div>
     </div>
   );

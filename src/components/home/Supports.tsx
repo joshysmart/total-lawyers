@@ -10,7 +10,7 @@ export default function Support() {
 
   return (
     <>
-      <p className="text-lg leading-5 mt-6 lg:mt-10">{en.moreInfo}</p>
+      <p className="text-lg leading-5 lg:mt-10">{en.moreInfo}</p>
 
       <div className="flex items-center gap-8 mt-3">
         <div className="flex items-center text-lg">

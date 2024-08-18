@@ -56,7 +56,7 @@ export default function StepFour({ register, errors }: StepFourProps) {
 
       <MyButton className="mt-4">{en.lastStep}</MyButton>
 
-      <p className="lg:mt-2 text-xs text-[#8F8F8F]">
+      <p className="lg:mt-2 text-xs text-[#8F8F8F] hidden lg:block">
         {en.privacyDisclaimerDescription}
       </p>
     </>

@@ -58,7 +58,9 @@ export default function StepFive({ register, errors }: StepFiveProps) {
 
       <MyButton className="mt-4">{en.submitButtonText}</MyButton>
 
-      <PurifiedHtml html={en.tosPolicy} />
+      <div className="lg:block hidden">
+        <PurifiedHtml html={en.tosPolicy} />
+      </div>
     </>
   );
 }
