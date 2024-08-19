@@ -25,7 +25,7 @@ export default function StepFour({ register, errors }: StepFourProps) {
           register={register}
           required={en.zipCodeRequired}
           pattern={{
-            value: /^[0-9]{5}(?:-[0-9]{4})?$/,
+            value: /^[0-9]{5}(?:-[0-9]{6})?$/,
             message: en.zipCodeRequired,
           }}
           name="zipCode"
